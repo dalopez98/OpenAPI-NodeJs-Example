@@ -65,3 +65,9 @@
   font-weight: bold;
   margin-top: 40px;
 }
+.code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}

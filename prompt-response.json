@@ -1,0 +1,20 @@
+{
+  "warning": "This model version is deprecated. Migrate before January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations",
+  "id": "cmpl-7tgIwo9wiv0lgVQTaqtl8M7KjiFPh",
+  "object": "text_completion",
+  "created": 1693505014,
+  "model": "text-davinci-003",
+  "choices": [
+    {
+      "text": " Super Whiskers, Mighty Paws, The Amazing Tabby",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 61,
+    "completion_tokens": 13,
+    "total_tokens": 74
+  }
+}

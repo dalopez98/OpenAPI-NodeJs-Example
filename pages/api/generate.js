@@ -1,7 +1,9 @@
+import * as fs from 'fs';
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
+  organization: process.env.OPENAI_ORGANIZATION,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -19,18 +21,24 @@ export default async function (req, res) {
   if (animal.trim().length === 0) {
     res.status(400).json({
       error: {
-        message: "Please enter a valid animal",
+        message: "Please enter a valid animal.",
       }
     });
     return;
   }
 
   try {
+    // openai.
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
+      // model: "gpt-3.5-turbo",
       prompt: generatePrompt(animal),
-      temperature: 0.6,
+      temperature: 0.5,
+      max_tokens: 256
     });
+
+    console.log(completion);
+    saveJsonPayload(completion.data);
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {
     // Consider adjusting the error handling logic for your use case
@@ -49,8 +57,7 @@ export default async function (req, res) {
 }
 
 function generatePrompt(animal) {
-  const capitalizedAnimal =
-    animal[0].toUpperCase() + animal.slice(1).toLowerCase();
+  const capitalizedAnimal = animal[0].toUpperCase() + animal.slice(1).toLowerCase();
   return `Suggest three names for an animal that is a superhero.
 
 Animal: Cat
@@ -59,4 +66,12 @@ Animal: Dog
 Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
 Animal: ${capitalizedAnimal}
 Names:`;
+}
+
+function saveJsonPayload(json) {
+  fs.writeFile("prompt-response.json", JSON.stringify(json), 'utf-8', function(err) {
+      if (err) {
+          console.log(err);
+      }
+  });
 }

@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-7tiwyqL6iHTWdavOwsR9Ti53bBguy",
+  "object": "chat.completion",
+  "created": 1693515184,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"users\": [\n    {\n      \"first_name\": {\n        \"value\": \"John\",\n        \"type\": \"string\"\n      },\n      \"last_name\": {\n        \"value\": \"Doe\",\n        \"type\": \"string\"\n      },\n      \"age\": {\n        \"value\": 25,\n        \"type\": \"number\"\n      },\n      \"date_of_birth\": {\n        \"value\": \"1996-08-10\",\n        \"type\": \"string\"\n      },\n      \"gender\": {\n        \"value\": true,\n        \"type\": \"boolean\"\n      }\n    },\n    {\n      \"first_name\": {\n        \"value\": \"Emma\",\n        \"type\": \"string\"\n      },\n      \"last_name\": {\n        \"value\": \"Smith\",\n        \"type\": \"string\"\n      },\n      \"age\": {\n        \"value\": 32,\n        \"type\": \"number\"\n      },\n      \"date_of_birth\": {\n        \"value\": \"1989-05-15\",\n        \"type\": \"string\"\n      },\n      \"gender\": {\n        \"value\": false,\n        \"type\": \"boolean\"\n      }\n    },\n    {\n      \"first_name\": {\n        \"value\": \"Michael\",\n        \"type\": \"string\"\n      },\n      \"last_name\": {\n        \"value\": \"Johnson\",\n        \"type\": \"string\"\n      },\n      \"age\": {\n        \"value\": 41,\n        \"type\": \"number\"\n      },\n      \"date_of_birth\": {\n        \"value\": \"1980-02-25\",\n        \"type\": \"string\"\n      },\n      \"gender\": {\n        \"value\": true,\n        \"type\": \"boolean\"\n      }\n    },\n    {\n      \"first_name\": {\n        \"value\": \"Sophia\",\n        \"type\": \"string\"\n      },\n      \"last_name\": {\n        \"value\": \"Brown\",\n        \"type\": \"string\"\n      },\n      \"age\": {\n        \"value\": 28,\n        \"type\": \"number\"\n      },\n      \"date_of_birth\": {\n        \"value\": \"1993-11-07\",\n        \"type\": \"string\"\n      },\n      \"gender\": {\n        \"value\": false,\n        \"type\": \"boolean\"\n      }\n    },\n    {\n      \"first_name\": {\n        \"value\": \"David\",\n        \"type\": \"string\"\n      },\n      \"last_name\": {\n        \"value\": \"Wilson\",\n        \"type\": \"string\"\n      },\n      \"age\": {\n        \"value\": 37,\n        \"type\": \"number\"\n      },\n      \"date_of_birth\": {\n        \"value\": \"1984-04-18\",\n        \"type\": \"string\"\n      },\n      \"gender\": {\n        \"value\": true,\n        \"type\": \"boolean\"\n      }\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 392,
+    "completion_tokens": 596,
+    "total_tokens": 988
+  }
+}
